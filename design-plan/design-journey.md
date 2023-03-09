@@ -21,38 +21,37 @@ You can use bullet points and lists, or full paragraphs, or a combo, whichever i
 ### Catalog (Milestone 1)
 > What will your catalog website be about? (1 sentence)
 
-TODO: catalog topic
+My catalog website would be about music with beautiful performance
 
 
 ### Audience (Milestone 1)
 > Briefly explain your site's audience. Your audience should be specific, but not arbitrarily specific. (1 sentence)
 > Justify why this audience is a **cohesive** group. (1-2 sentences)
 
-TODO: site audience
+My audience would be dancers who are looking for more potential songs to dance to.
 
-TODO: why is this a _cohesive_ audience?
-
+This is a cohesive group because many dancers, including myself, often find themselves in need of music recommendations to dance to or choreograph to. I would be offering a list of my personal favorites in different genres of music and they can add songs to the catalog as well.
 
 ### Audience Goals (Milestone 1)
 > Document your audience's goals for using this catalog website.
 > List each goal below. There is no specific number of goals required for this, but you need enough to do the job (Hint: It's more than 1. But probably not more than 3.)
 > **Hint:** Users will be able to view all entries in the catalog and insert new entries into the catalog. The audience's goals should probably relate to these activities.
 
-Goal 1: TODO: brief title
+Goal 1: The user will be able to view all the songs that people recommend for dance as well as being able to see what genre the song is in and what type of style of dances the song could be choreographed to.
 
 - **Design Ideas and Choices** _How will you meet those goals in your design?_
-  - TODO: design ideas (1-2 sentences)
+  - I will meet this goal by creating a column for each song reccomendation and columns for the name of the artist as well as introducing the genre of the music and what types of dance styles could be used to choreograph.
 - **Rationale & Additional Notes** _Justify your decisions; additional notes._
   - TODO: rationale  (1-2 sentences)
 
-Goal 2: TODO: brief title
+Goal 2: The user will be able to add songs they want to recommend for dancing.
 
 - **Design Ideas and Choices** _How will you meet those goals in your design?_
-  - TODO: design ideas (1-2 sentences)
+  - I will implement a form which adds to the database what song recommendations users have if they decide to leave a recommendation
 - **Rationale & Additional Notes** _Justify your decisions; additional notes._
   - TODO: rationale (1-2 sentences)
 
-Goal 3: TODO: brief title
+Goal 3: The user would be able to see choreography inspiration for each song provided.
 
 TODO: design ideas and rationale
 
@@ -64,9 +63,9 @@ TODO: add as many goals as needed
 > How will your audience access this website? From a narrow (phone) or wide (laptop) device?
 > Justify your decision. (1 sentence)
 
-TODO: audience device
+Desktop Website
 
-TODO: audience device justification
+I think that a desktop view would make more sense since it would give a more full view of the table that I intend to create.
 
 
 ### Persona (Milestone 1)
@@ -99,6 +98,7 @@ TODO: summary of persona's desires (1-2 bullet points)
 > Justify why this data aligns with your persona's goals. (1 sentence)
 
 TODO: list the data your persona will need to effectively use the catalog
+
 
 TODO: Justify why this data aids the persona with their goals.
 
@@ -134,11 +134,13 @@ TODO: design pattern explanation
 > A bulleted list is probably the simplest way to do this.
 > Make sure you include constraints for each field.
 
-Table: TODO: table name
+Table: music
 
-- field1: TYPE {constraints...},
-- field2...
-- TODO: table fields + type + constraints
+- "name": TEXT {NOT NULL UNIQUE}
+- "artist": TEXT {NOT NULL}
+- "genre": TEXT {NOT NULL}
+- "style": TEXT {}
+- "inspiration": TEXT {}
 
 
 ### Database Query Plan (Milestone 1, Final Submission)
@@ -149,12 +151,23 @@ Table: TODO: table name
 
     ```
     TODO: query for all records
+    $db = open_sqlite_db('secure/site.sqlite');
+    $result = exec_sql_query($db, 'SELECT * FROM music;');
+    $records = $result->fetchAll();
     ```
 
-2. Insert Record (Final Submission)
+1. Insert Record (Final Submission)
 
     ```
     TODO: insert query
+     foreach ($records as $record) { ?>
+        <tr>
+          <td><?php echo htmlspecialchars( $record['name'] ); ?></td>
+          <td><?php echo htmlspecialchars( $record['artist'] ); ?></td>
+          <td><?php echo htmlspecialchars( $record['genre' ] ); ?></td>
+          <td><?php echo htmlspecialchars( $record['style'] ); ?></td>
+          <td><?php echo htmlspecialchars( $record['inspiration'] ); ?></td>
+        </tr>
     ```
 
 
