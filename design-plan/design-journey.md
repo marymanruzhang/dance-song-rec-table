@@ -42,21 +42,17 @@ Goal 1: The user will be able to view all the songs that people recommend for da
 - **Design Ideas and Choices** _How will you meet those goals in your design?_
   - I will meet this goal by creating a column for each song reccomendation and columns for the name of the artist as well as introducing the genre of the music and what types of dance styles could be used to choreograph.
 - **Rationale & Additional Notes** _Justify your decisions; additional notes._
-  - TODO: rationale  (1-2 sentences)
+  - By having columns that are specific to each category, the user can clearly see which the details that are unique to each song.
 
 Goal 2: The user will be able to add songs they want to recommend for dancing.
 
 - **Design Ideas and Choices** _How will you meet those goals in your design?_
-  - I will implement a form which adds to the database what song recommendations users have if they decide to leave a recommendation
-- **Rationale & Additional Notes** _Justify your decisions; additional notes._
-  - TODO: rationale (1-2 sentences)
+  - I will implement a form which adds to the database what song recommendations users have if they decide to leave a recommendation for other users to see.
 
 Goal 3: The user would be able to see choreography inspiration for each song provided.
+_
+  - I will have a column designed to reccomend already existing choreographies for each song that is optional but can be filled to give other users inspiration in choreographing for a certain song.
 
-TODO: design ideas and rationale
-
-
-TODO: add as many goals as needed
 
 
 ### Audience Device (Milestone 1)
@@ -72,36 +68,46 @@ I think that a desktop view would make more sense since it would give a more ful
 > Use the goals you identified above to develop a persona of your site's audience.
 > Your persona must have a name and a face. The face can be a photo of a face or a drawing, etc.
 
-TODO: persona's face
+![persona](/design-plan/persona.jpg)
 
-TODO: persona name
+Julia
 
 **Factors that Influence Behavior:**
 
-TODO: summary of the persona's factors that influence their behavior (1-2 bullet points)
+- Knowledge of songs Julia listens to on a regular basis
+- Type of music genre Julia usually listens to
+- Type of dance styles Julia usually likes to dance to
+- Willingness to share song recommendation
 
 **Goals:**
 
-TODO: summary of persona's goals (1-2 bullet points)
+- Find new music to choreograph to
+- Give recommendations and share songs to others
+
 
 **Obstacles:**
 
-TODO: summary of persona's obstacles (1-2 bullet points)
+- It is hard to find songs to choreograph to sometimes since she might be stuck in her own playlists
+- It is hard to decide whwat type of style to dance to and often lack inspiration to choreograph
 
 **Desires:**
 
-TODO: summary of persona's desires (1-2 bullet points)
+-Learn more about new music to choreograph to
+-Find inspiration in other dance choreographies and styles
 
 
 ### Catalog Data (Milestone 1)
 > Using your persona, identify the data you need to include in the catalog for your site's audience.
 > Justify why this data aligns with your persona's goals. (1 sentence)
 
-TODO: list the data your persona will need to effectively use the catalog
+Data:
+    -Song Name
+    -Artist
+    -Music Genre
+    -Potential Dance Style
+    -Choreography Inspiration
 
-
-TODO: Justify why this data aids the persona with their goals.
-
+These data help Julia with new song recommendations as well as the artist's name. Julia will know the music genre without needing to actually listen to the music yet. There is also suggested potential dance styles which the song could be suitable for. There is also examples of choreography for each song that could give some inspiration to her.
 
 
 ### Site Design (Milestone 1)
@@ -116,13 +122,13 @@ TODO: Justify why this data aids the persona with their goals.
 > Provide a brief explanation _underneath_ each sketch. (1 sentence)
 > **Refer to your persona by name in each explanation.**
 
-TODO: sketch(es) + explanation
-
+![sketch](/design-plan/sketch.jpg)
+I want my website to be pretty clean and chic. The table will be aligned to the right with the form and text on the left.
 
 ### Catalog Design Patterns (Milestone 1)
 > Explain how you used design patterns for online catalogs in your site's design. (1-2 sentences)
 
-TODO: design pattern explanation
+I used design patterns of shaded rows for every even row to help visibility and accesibility.
 
 
 ## Implementation Plan (Milestone 1, Milestone 2)
@@ -150,7 +156,6 @@ Table: music
 1. All Records (Milestone 1)
 
     ```
-    TODO: query for all records
     $db = open_sqlite_db('secure/site.sqlite');
     $result = exec_sql_query($db, 'SELECT * FROM music;');
     $records = $result->fetchAll();
@@ -159,7 +164,6 @@ Table: music
 1. Insert Record (Final Submission)
 
     ```
-    TODO: insert query
      foreach ($records as $record) { ?>
         <tr>
           <td><?php echo htmlspecialchars( $record['name'] ); ?></td>

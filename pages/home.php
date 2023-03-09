@@ -1,6 +1,4 @@
 <?php
-$title = 'Home';
-
 // open database
 $db = open_sqlite_db('secure/site.sqlite');
 
@@ -18,25 +16,29 @@ $records = $result->fetchAll();
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title><?php echo $title; ?> - Song Recommendations for Dance Choreography</title>
+  <title>Home - Song Recommendations for Dance Choreography</title>
 
   <link rel="stylesheet" type="text/css" href="/public/styles/site.css" media="all">
 </head>
 
 <body>
-  <?php include 'includes/header.php'; ?>
+
+<header>
+  <title>Song Recommendations </title>
+</header>
 
   <main class="home">
-    <h2><?php echo $title; ?></h2>
+    <h2>Song Recommendations for Dance</h2>
 
     <table>
       <tr>
-        <th>Name</th>
+        <th>Song Name</th>
         <th>Artist</th>
         <th>Music Genre</th>
         <th>Potential Dance Style</th>
         <th>Choreography Inspiration</th>
       </tr>
+
       <?php
       // write a table row for each record
       foreach ($records as $record) { ?>

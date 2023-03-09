@@ -1,6 +1,6 @@
 header {
     color: white;
-    background-color: #556688;
+    background-color: #f6d8d8;
     padding: 1px 0 30px 0;
   }
 
@@ -14,32 +14,43 @@ header #title {
     padding: 10px;
   }
 
+.home {
+  width: 60%;
+  margin-left: 37%;
+
+}
+
 table {
     /* required. remove extra space between table cells */
     border-spacing: 0;
+    table-layout: fixed;
+
 
     /* frame the table with a border on top and bottom */
-    border-top: 2px solid #000000;
+
     border-bottom: 2px solid #000000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-collapse: collapse;
   }
 
   table tr {
     /* default table background color */
-    background-color: #ffffff;
+    background-color: #ffecec;
   }
 
   table tr:nth-child(even) {
     /* alternate row color */
-    background-color: #cccccc;
+    background-color: #ffffff;
   }
+
+
 
   /* table headers */
   table th {
     text-align: left;
     font-weight: bold;
-
     /* required for scrolling table header: must specify color of cell */
-    background-color: #ffffff;
+    background-color: #f6d8d8;
 
     /* line underneath header */
     border-bottom: 1px solid #000000;
@@ -66,6 +77,14 @@ table {
     /* spacing between columns */
     padding-left: 8px;
     padding-right: 8px;
+  }
+
+  table th:first-of-type{
+    border-top-left-radius: 20%;
+  }
+
+  table th:last-of-type{
+    border-top-right-radius: 20%;
   }
 
   /* remove spacing between columns on last column */
