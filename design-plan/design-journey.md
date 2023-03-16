@@ -178,20 +178,54 @@ Table: music
 ### From Validation (Milestone 2)
 > Plan the validation criteria for each piece of form data.
 
-- TODO: form data name
-  - TODO: form data criteria
-- TODO: form data name
-  - TODO: form data criteria
-- TODO: form data name
-  - TODO: form data criteria
-- ...
+- Song name
+  - Text
+- Artist name
+  - Text
+- Genre
+  - Text
+- Style
+  - Text
+- Inspiration
+  - Text
 
 
 ### Form Planning (Milestone 2)
 > Plan your form validation using **pseudocode**.
 
 ```
-TODO: Form validation pseudocode
+If form was submitted:
+   Store form data as variables.
+   Assume form is valid.
+   Validate each piece of required data:
+
+  Song name is required.
+  If $data is empty ($data == ''):
+    Mark form as invalid.
+    Show corrective feedback for $data.
+
+  Artist name is required.
+  If $data is empty ($data == ''):
+    Mark form as invalid.
+    Show corrective feedback for $data.
+
+  Genre is required.
+  If $data is empty ($data == ''):
+    Mark form as invalid.
+    Show corrective feedback for $data.
+
+  Style is not required.
+  If $data is empty ($data == ''):
+
+  Inspiration is not required.
+  If $data is empty ($data == ''):
+
+  If form data is valid:
+    Show confirmation.
+  } else {
+    Set sticky values and echo them.
+  }
+}
 ```
 
 
@@ -200,17 +234,19 @@ TODO: Form validation pseudocode
 
 **Valid Test Data:**
 
-- TODO: form data name: "TODO: sample valid data"
-- TODO: form data name: "TODO: sample valid data"
-- TODO: form data name: "TODO: sample valid data"
-- ...
+- Name: "Ash"
+- Artist: "Seventeen"
+- Genre: "Pop"
+- Style: "Hip Hop"
+- Inspo: "HOSHI"
 
 **Invalid Test Data:**
 
-- TODO: form data name: "TODO: sample invalid data"
-- TODO: form data name: "TODO: sample invalid data"
-- TODO: form data name: "TODO: sample invalid data"
-- ...
+- Name: "3823493"
+- Artist: "4892u"
+- Genre: "432"
+- Style: "Dance"
+- Inspo: "link"
 
 
 ## Complete & Polished Website (Final Submission)

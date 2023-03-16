@@ -108,3 +108,9 @@ table {
   main.home table {
     width: 100%;
   }
+
+  section {
+    margin-left: 2%;
+    width: 30%;
+    margin-top: -300px;
+  }
