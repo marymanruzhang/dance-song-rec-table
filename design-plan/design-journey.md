@@ -125,6 +125,9 @@ These data help Julia with new song recommendations as well as the artist's name
 ![sketch](/design-plan/sketch.jpg)
 I want my website to be pretty clean and chic. The table will be aligned to the right with the form and text on the left.
 
+![sketch](/design-plan/updated.jpg)
+This is an updated sketch of the website. I decided to go for a darker theme. It has a more cohesive theme and more visual impact to go with the dance chic theme.
+
 ### Catalog Design Patterns (Milestone 1)
 > Explain how you used design patterns for online catalogs in your site's design. (1-2 sentences)
 
@@ -238,15 +241,15 @@ If form was submitted:
 - Artist: "Seventeen"
 - Genre: "Pop"
 - Style: "Hip Hop"
-- Inspo: "HOSHI"
+- inspiration: "HOSHI"
 
 **Invalid Test Data:**
 
-- Name: "3823493"
-- Artist: "4892u"
-- Genre: "432"
-- Style: "Dance"
-- Inspo: "link"
+- Name: ""
+- Artist: ""
+- Genre: ""
+- Style: "" (no invalid)
+- inspiration: "" (no invalid)
 
 
 ## Complete & Polished Website (Final Submission)
@@ -255,28 +258,26 @@ If form was submitted:
 > Tell us what issues you discovered during your accessibility audit.
 > What do you do to improve the accessibility of your site?
 
-TODO: audit fixes
-
+I didn't have any accessibility audits. The only alert was a missing H1 header which I changed the H2 in the header into H1.
 
 ### Self-Reflection (Final Submission)
 > Reflect on what you learned during this assignment. How have you improved from Project 1? What would you do differently next time? (2-3 sentences)
 
-TODO: reflection
+I think I was more careful with accessibility audits since that was what I was I got points off for in my project 1. I would perhaps try out more different styles or variations of design next time.
 
 
 > Take some time here to reflect on how much you've learned since you started this class. It's often easy to ignore our own progress. Take a moment and think about your accomplishments in this class. Hopefully you'll recognize that you've accomplished a lot and that you should be very proud of those accomplishments! (1-3 sentences)
 
-TODO: reflection
+I think this project has been very different from the previous in terms of implementing more interactive desing with the client. I think this is very different from the dynamic side of web programming. I am proud to be able to accomplish the website and for it look pretty aesthetic.
 
 
 ### Collaborators (Final Submission)
 > List any persons you collaborated with on this project.
 
-TODO: list your collaborators
+n/a
 
 
 ### Reference Resources (Final Submission)
 > Please cite any external resources you referenced in the creation of your project.
 > (i.e. W3Schools, StackOverflow, Mozilla, etc.)
-
-TODO: list reference resources
+Canvas materials

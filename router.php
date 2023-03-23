@@ -1,6 +1,8 @@
 <?php
 include_once('includes/db.php');
 
+$db = open_sqlite_db('secure/site.sqlite');
+
 const ROUTES = array(
   '/' => 'pages/home.php'
 );
